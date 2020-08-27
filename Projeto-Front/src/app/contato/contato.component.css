@@ -1,0 +1,43 @@
+h1{
+    color: #E6615A;
+}
+
+.nome{
+    font-size: 18px;
+}
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+    padding: 0;
+}
+    
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.faTwitter{
+    color: #3b5998;
+}
+    
+.faLinkedin{
+    color: #0072b1;
+}
+    
+.faGithub{
+    color: #000;
+}
+
+.card-group{
+    width: auto;
+    display: flex;
+    overflow-x: auto;
+}
+
+.card{
+    width: 300px;
+    flex-shrink: 0;
+    height: 100%;
+}

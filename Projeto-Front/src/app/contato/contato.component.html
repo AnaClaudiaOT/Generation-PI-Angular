@@ -1,1 +1,67 @@
-<p>contato works!</p>
+<div class="container mt-3 mb-5">
+
+    <div class="row">
+        <div class="col-md-8 mt-3">
+            <h1 class="text-justify">Entre em contato conosco</h1>
+            <form class="w-100">
+                <div class="form-group">
+                    <label for="inputEmail">Email</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="inputEmail">
+                    <small id="emailHelp" class="form-text text-muted">Nós nunca iremos compartilhar seu e-mail com
+                        algúem.</small>
+                </div>
+                <div class="form-group">
+                    <label for="inputTextArea">Mensagem</label>
+                    <textarea class="form-control" name="inputTextArea" id="inputTextArea" rows="10"></textarea>
+                </div>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Enviar</button>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tudo certo!</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Recebemos sua mensagem, muito obrigado!</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="../../assets/img/angela.jfif" class="card-img-top" alt="">
+                <div class="card-body pb-0">
+                    <p class="text-center nome font-weight-bold mb-2">Angela Deodato</p>
+                    <p class="text-center text-primary font-weight-bold mt-0">Desenvolvedora Full-Stack</p>
+                    <p class="card-text text-center">Some quick example text to build on the card title and make up the
+                        bulk
+                        of the card's content.</p>
+                    <ul class="social-network d-flex justify-content-center">
+                        <li><a href="#" class="icoTwitter" title="Twitter">
+                                <fa-icon [icon]="faTwitter" class="faTwitter fa-3x p-3"></fa-icon>
+                            </a></li>
+                        <li><a href="#" class="icoGithub" title="Github">
+                                <fa-icon [icon]="faGithub" class="faGithub fa-3x p-3"></fa-icon>
+                            </a></li>
+                        <li><a href="#" class="icoLinkedin" title="Linkedin">
+                                <fa-icon [icon]="faLinkedin" class="faLinkedin fa-3x p-3"></fa-icon>
+                            </a></li>
+                    </ul>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+</div>
