@@ -1,0 +1,23 @@
+#imagem{
+    height: 100%;
+    width:100%;    
+}
+
+.fonte{
+    font-size: 30px;
+    text-align: center;
+    justify-content: center;
+}
+
+.flexbox{
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.p-30{
+    padding: 20;
+}
