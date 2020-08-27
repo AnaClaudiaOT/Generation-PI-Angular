@@ -29,8 +29,8 @@
             ],
             "scripts": [
               "./node_modules/jquery/dist/jquery.js",
-                	"./node_modules/bootstrap/dist/js/bootstrap.js",
-                	"./node_modules/popper.js/dist/umd/popper.min.js"
+              "./node_modules/bootstrap/dist/js/bootstrap.js",
+              "./node_modules/popper.js/dist/umd/popper.min.js"
             ]
           },
           "configurations": {
@@ -124,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "Projeto-Front"
+    }
+  },
+  "defaultProject": "Projeto-Front",
+  "cli": {
+    "analytics": "4352f30f-978f-4770-ba2b-af1c4f395a18"
+  }
 }
