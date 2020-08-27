@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+
+.colorfooter {
+    background-color: #803632;
+}
+
+.fonte {
+    font-family: 'Nunito', sans-serif;
+}
+
+#menu li a:hover {
+
+    color: black;
+
+}
