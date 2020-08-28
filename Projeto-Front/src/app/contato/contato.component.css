@@ -30,14 +30,8 @@ ul.social-network li {
     color: #000;
 }
 
-.card-group{
-    width: auto;
-    display: flex;
-    overflow-x: auto;
-}
-
-.card{
-    width: 300px;
-    flex-shrink: 0;
-    height: 100%;
+.carousel-control-next, .carousel-control-prev{
+    border-radius: 3px;
+    height: 50px;
+    margin-right: 63px;
 }
