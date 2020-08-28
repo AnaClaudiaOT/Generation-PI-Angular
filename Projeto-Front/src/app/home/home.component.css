@@ -1,8 +1,3 @@
-#imagem{
-    height: 100%;
-    width:100%;    
-}
-
 .fonte{
     font-size: 30px;
     text-align: center;
@@ -19,5 +14,5 @@
 }
 
 .p-30{
-    padding: 20;
+    padding: 20px;
 }
