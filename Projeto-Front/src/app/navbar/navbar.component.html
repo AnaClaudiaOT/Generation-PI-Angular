@@ -1,29 +1,38 @@
-<div class="container-fluid d-flex justify-content-center">
-    <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
-            aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        
-        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
-           
-            <img id="logo" src="https://imgur.com/qu97dbi.png" alt="logo-clippy">
-            <ul class="navbar-nav mr-auto">
 
+<div class="container-fluid d-flex">
+    
+    <img id="logo" src="https://imgur.com/qu97dbi.png" alt="logo-clippy" class="mt-2">
+    
+    <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Buscar no Clippy!" aria-label="Search">
+        <button class="btn btn-outline-danger my-2 my-sm-0" type="submit">Buscar</button>
+    </form>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+            
+            
+            <ul class="navbar-nav mr-auto">
+                
                 <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3" routerLink='/home'>Home
+                    <a class="nav-link fonte text-uppercase font-weight-bold p-3" routerLink='/home'>Home
                         <span class="sr-only">(página atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3"
+                    <a class="nav-link fonte text-uppercase font-weight-bold p-3"
+                        routerLink='/feed'>Feed</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link fonte text-uppercase font-weight-bold p-3"
                         routerLink='/sobre'>Sobre nós</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3"
+                    <a class="nav-link fonte text-uppercase font-weight-bold p-3"
                         routerLink='/contato'>Contato</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link texto text-monospace text-uppercase font-weight-bold p-3"
+                    <a class="nav-link fonte text-uppercase font-weight-bold p-3"
                         routerLink='/login'>Login</a>
                 </li>
 
