@@ -1,1 +1,30 @@
-<p>feed works!</p>
+<div class="container-fuild">
+
+    <div class="row d-flex justify-content-center mt-3">
+        <div class="col-md-4">
+            <div class="input-group mb-3">
+                <select class="custom-select" id="inputGroupSelect01" [(ngModel)]='idTema' (change)='findByIdTema()'>
+                  <option *ngFor='let item of listaTemas' value={{item.id}}>
+                      {{item.nome}}
+                  </option>
+                </select>
+              </div>
+        </div>
+    </div>
+
+    <div class="row d-flex justify-content-center mt-3 mb-5">
+        <div class="col-md-8">
+
+            <div class="card" *ngFor='let item of listaPostagens'>
+                <div class="card-header">
+                  {{item.usuario.nomeCompleto}}
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title">{{item.titulo}}</h5>
+                  <p class="card-text">{{item.conteudo}}</p>
+                </div>
+              </div>
+
+        </div>
+    </div>
+</div>
