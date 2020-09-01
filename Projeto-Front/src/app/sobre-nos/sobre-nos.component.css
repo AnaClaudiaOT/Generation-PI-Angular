@@ -1,3 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 .cardf{
     margin-left: 130px;
 }
+ 
+.imgsobre{
+    width: 350px;
+    height: 350px;
+}
+
+
+.sobreTit{
+      letter-spacing: .2rem;
+        font-size: 20pt;
+        color: #fafafa;
+        font-family: 'nunito';
+        font-weight: bolder;
+}
+
+.sobre{
+    letter-spacing: .2rem;
+    font-size: 15pt;
+    color: black;
+    font-family: 'nunito';
+    font-weight: bolder;
+}
+
