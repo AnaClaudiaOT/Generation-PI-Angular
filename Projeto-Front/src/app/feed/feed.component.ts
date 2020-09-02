@@ -11,6 +11,9 @@ import { TemaService } from '../service/tema.service';
 })
 export class FeedComponent implements OnInit {
 
+  key = 'data'
+  reverse = true
+
   constructor(private postagemService: PostagemService, private temaService: TemaService) { }
 
   postagem: PostagemModel = new PostagemModel();
@@ -21,27 +24,43 @@ export class FeedComponent implements OnInit {
   idTema: number;
 
   ngOnInit() {
-    window.scroll(0,0)
+    window.scroll(0, 0)
     this.findAllPostagens()
     this.findAllTemas()
   }
 
-  findAllPostagens(){
+  findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: PostagemModel[]) => {
       this.listaPostagens = resp;
     });
   }
 
-  findAllTemas(){
-    this.temaService.getAllTemas().subscribe((resp: TemaModel[]) => {
-      this.listaTemas = resp;
-    })
+  publicar() {
+    this.tema.id = this.idTema
+    this.postagem.tema = this.tema
+
+    if (this.postagem.titulo == null || this.postagem.conteudo == null || this.postagem.tema == null || this.postagem.referencia == null) {
+      alert("Preencha todoos os campos antes de publicar!")
+    } else {
+      this.postagemService.postPostagem(this.postagem).subscribe((resp: PostagemModel) => {
+        this.postagem = resp
+        this.postagem = new PostagemModel()
+        alert('Postagem realizada com sucesso!')
+        this.findAllPostagens()
+      })
+    }
   }
 
-  findByIdTema(){
-    this.temaService.getByIdTema(this.idTema).subscribe((resp: TemaModel) => {
-      this.tema = resp;
-    });
-  }
+      findAllTemas(){
+        this.temaService.getAllTemas().subscribe((resp: TemaModel[]) => {
+          this.listaTemas = resp;
+        })
+      }
 
-}
+      findByIdTema(){
+        this.temaService.getByIdTema(this.idTema).subscribe((resp: TemaModel) => {
+          this.tema = resp;
+        });
+      }
+
+    }
