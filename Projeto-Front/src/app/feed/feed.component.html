@@ -9,45 +9,48 @@
             {{item.nome}}
           </option>
         </select>
-        
+
       </div>
 
     </div>
 
   </div>
-  <form class="row d-flex justify-content-center">
+  <div class="row d-flex justify-content-center">
     <div class="col-md-6">
-      <div class="form-group">
+      <div class="div-group">
         <label for="exampleInputEmail1">Título</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)]='postagem.titulo'>
-        
+        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+          [(ngModel)]='postagem.titulo'>
       </div>
-
 
       <div class="form-group">
         <label for="exampleFormControlTextarea1">Descrição</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" [(ngModel)]='postagem.conteudo'></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+          [(ngModel)]='postagem.conteudo'></textarea>
       </div>
       <div class="form-group">
         <label for="exampleInputPassword1">Referência</label>
         <input type="text" class="form-control" id="exampleInputPassword1" [(ngModel)]='postagem.referencia'>
         <small id="emailHelp" class="form-text text-muted">Informe sua fonte de pesquisa - Cole aqui seu link!</small>
       </div>
-      <button type="submit" class="btn btn-primary" (click)='publicar()'>Publicar</button>
-      <hr>
-    </div>  
-  </form>
-  
-  <div class="row d-flex justify-content-center mt-3 mb-5">
-    <div class="col-md-8">
+      <div class="form-group d-flex justify-content-end">
+        <button type="submit" class="btn btn-primary" (click)='publicar()'>Publicar</button>
+      </div>
+      <hr class="mt-5">
+    </div>
+  </div>
 
-      <div class="card" *ngFor='let item of listaPostagens'>
-        <div class="card-header">
-          {{item.usuario.nomeCompleto}}
+  <div class="row ddivx justify-content-center mt-3 mb-5">
+    <div class="col-md-6">
+
+      <div class="card my-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
+        <div class="card-header d-flex justify-content-between align-items-center">
+          <h5 class="card-title">{{item.titulo}}</h5>
+          <p><small class="text-muted">{{item.tema.nome}}</small></p>
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{item.titulo}}</h5>
           <p class="card-text">{{item.conteudo}}</p>
+          <footer class="blockquote-footer"> Postado em: <cite title="hora"> {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </cite> </footer>
         </div>
       </div>
 

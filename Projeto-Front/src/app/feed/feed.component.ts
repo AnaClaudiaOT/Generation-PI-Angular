@@ -32,6 +32,7 @@ export class FeedComponent implements OnInit {
   findAllPostagens() {
     this.postagemService.getAllPostagens().subscribe((resp: PostagemModel[]) => {
       this.listaPostagens = resp;
+      console.log(this.listaPostagens);
     });
   }
 
@@ -46,21 +47,21 @@ export class FeedComponent implements OnInit {
         this.postagem = resp
         this.postagem = new PostagemModel()
         alert('Postagem realizada com sucesso!')
-        this.findAllPostagens()
+        this.findAllPostagens();
       })
     }
   }
 
-      findAllTemas(){
-        this.temaService.getAllTemas().subscribe((resp: TemaModel[]) => {
-          this.listaTemas = resp;
-        })
-      }
+  findAllTemas() {
+    this.temaService.getAllTemas().subscribe((resp: TemaModel[]) => {
+      this.listaTemas = resp;
+    })
+  }
 
-      findByIdTema(){
-        this.temaService.getByIdTema(this.idTema).subscribe((resp: TemaModel) => {
-          this.tema = resp;
-        });
-      }
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: TemaModel) => {
+      this.tema = resp;
+    });
+  }
 
-    }
+}

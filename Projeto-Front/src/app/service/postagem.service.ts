@@ -14,11 +14,11 @@ export class PostagemService {
   }
 
   getAllPostagens(){
-    return this.http.get('http://localhost:9000/postagem', this.token);
+    return this.http.get('http://localhost:8080/postagem', this.token);
   }
 
   postPostagem(postagem: PostagemModel){
-    return this.http.post('http://localhost:9000/postagem', postagem, this.token);
+    return this.http.post('http://localhost:8080/postagem', postagem, this.token);
   }
 
 }
