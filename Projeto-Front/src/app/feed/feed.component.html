@@ -9,12 +9,14 @@
             {{item.nome}}
           </option>
         </select>
-
       </div>
-
     </div>
-
   </div>
+
+  <div class="col-md-9">
+    <a class='d-flex justify-content-end' routerLink='/cadastro-tema'>Cadastre um novo tema</a>
+  </div>
+
   <div class="row d-flex justify-content-center">
     <div class="col-md-6">
       <div class="div-group">
@@ -45,12 +47,26 @@
 
       <div class="card my-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
         <div class="card-header d-flex justify-content-between align-items-center">
-          <h5 class="card-title">{{item.titulo}}</h5>
-          <p><small class="text-muted">{{item.tema.nome}}</small></p>
+          <div class='d-flex flex-column'>
+            <h5 class="card-title">{{item.titulo}}</h5>
+            <p><small class="text-muted">{{item.tema.nome}}</small></p>
+          </div>
+          <div class='d-flex'>
+            <ul class="social-network d-flex justify-content-center">
+              <li><a href="#" class="icoEdit" title="Edit">
+                  <fa-icon [icon]="faEdit" class="faEdit fa-2x p-3"></fa-icon>
+                </a></li>
+              <li><a href="#" class="icoTrashAlt" title="TrashAlt">
+                  <fa-icon [icon]="faTrashAlt" class="faTrashAlt fa-2x p-3"></fa-icon>
+                </a></li>
+            </ul>
+          </div>
         </div>
         <div class="card-body">
           <p class="card-text">{{item.conteudo}}</p>
-          <footer class="blockquote-footer"> Postado em: <cite title="hora"> {{item.data | date: 'dd/MM/yyyy'}} às {{item.data | date: 'HH:mm'}} </cite> </footer>
+          <span>Referência: </span> <a href="" class='mb-3'>{{item.referencia}}</a>
+          <footer class="blockquote-footer mt-3"> Postado em: <cite title="hora"> {{item.data | date: 'dd/MM/yyyy'}} às
+              {{item.data | date: 'HH:mm'}} </cite> </footer>
         </div>
       </div>
 

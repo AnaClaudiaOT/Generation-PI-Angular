@@ -3,6 +3,9 @@ import { PostagemModel } from '../model/PostagemModel';
 import { TemaModel } from '../model/TemaModel';
 import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faEdit } from '@fortawesome/free-regular-svg-icons';
+import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-feed',
@@ -10,6 +13,9 @@ import { TemaService } from '../service/tema.service';
   styleUrls: ['./feed.component.css']
 })
 export class FeedComponent implements OnInit {
+
+  faEdit = faEdit
+  faTrashAlt = faTrashAlt
 
   key = 'data'
   reverse = true

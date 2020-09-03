@@ -15,6 +15,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HttpClientModule } from '@angular/common/http';
 import{ FormsModule } from '@angular/forms';
 import{ OrderModule } from 'ngx-order-pipe';
+import { PostTemaComponent } from './post-tema/post-tema.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import{ OrderModule } from 'ngx-order-pipe';
     LoginComponent,
     CadastroComponent,
     FeedComponent,
-    ContatoComponent
+    ContatoComponent,
+    PostTemaComponent
   ],
   imports: [
     BrowserModule,
