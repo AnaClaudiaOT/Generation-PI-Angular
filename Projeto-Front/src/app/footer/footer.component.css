@@ -9,8 +9,9 @@
     font-family: 'Nunito', sans-serif;
 }
 
-#menu li a:hover {
-
-    color: black;
+.hoverFooter ul li a :hover{
+    color: rgb(229, 255, 0);
+text-shadow: rgb(229, 255, 0);
+font-weight: bold;
 
 }
