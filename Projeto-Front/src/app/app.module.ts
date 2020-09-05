@@ -13,6 +13,8 @@ import { FeedComponent } from './feed/feed.component';
 import { ContatoComponent } from './contato/contato.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,

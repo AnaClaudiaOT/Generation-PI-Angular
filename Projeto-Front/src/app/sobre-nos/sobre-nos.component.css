@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
-
 .cardf{
     margin-left: 130px;
 }
@@ -10,7 +9,6 @@
     width: 350px;
     height: 350px;
 }
-
 
 .sobreTit{
     letter-spacing: .2rem;
@@ -30,8 +28,43 @@
 
 .txt{
     font-family: Roboto,sans-serif;
+    color: black;
 }
 
 .txt1{
     font-family: 'Roboto', sans-serif, Medium 500;  
+}
+
+.btn1{
+    background-image: linear-gradient(to right, #FF6D67 0%, #fcb69f 51%, #ffecd2 100%);
+    padding: 5px;
+}
+
+.imgN{
+    height: 21rem;
+}
+
+
+ul.social-network {
+    list-style: none;
+    display: inline;
+    padding: 0;
+}
+    
+ul.social-network li {
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.faTwitter{
+    color: #3b5998;
+}
+    
+.faLinkedin{
+    color: #0072b1;
+}
+    
+.faGithub{
+    color: #000;
 }
