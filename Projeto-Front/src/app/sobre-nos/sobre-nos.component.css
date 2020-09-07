@@ -52,19 +52,11 @@ ul.social-network {
 }
     
 ul.social-network li {
-    display: inline;
-    margin: 0;
+  display: inline;
+   margin: 0;
     padding: 5px;
 }
 
-.faTwitter{
-    color: #3b5998;
-}
-    
-.faLinkedin{
-    color: #0072b1;
-}
-    
-.faGithub{
-    color: #000;
+.icones{
+ padding-top: 39px;
 }
