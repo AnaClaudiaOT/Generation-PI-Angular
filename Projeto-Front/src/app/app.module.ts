@@ -21,6 +21,8 @@ import { PutTemaComponent } from './put-tema/put-tema.component';
 import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
 import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
