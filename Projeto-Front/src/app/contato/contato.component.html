@@ -8,15 +8,18 @@
             <form class="w-100">
                 <div class="form-group">
                     <label for="inputEmail">Email</label>
-                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" name="inputEmail">
+                    <input type="email" class="form-control form-border" id="inputEmail" aria-describedby="emailHelp" name="inputEmail">
                     <small id="emailHelp" class="form-text text-muted">Nós nunca iremos compartilhar seu e-mail com
                         algúem.</small>
                 </div>
                 <div class="form-group">
                     <label for="inputTextArea">Mensagem</label>
-                    <textarea class="form-control" name="inputTextArea" id="inputTextArea" rows="7"></textarea>
+                    <textarea class="form-control form-border" name="inputTextArea" id="inputTextArea" rows="7"></textarea>
                 </div>
-                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">Enviar</button>
+                <div class="d-flex justify-content-center align-items-end flex-column">
+                    <button type="button" class="btn success" data-toggle="modal" data-target="#exampleModal">Enviar</button>
+                </div>
+                
                 <!-- Modal -->
                 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
                     aria-hidden="true">

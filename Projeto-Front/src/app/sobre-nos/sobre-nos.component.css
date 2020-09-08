@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
+.fonte{
+    font-family: 'Nunito';
+}
 
 .cardf{
     margin-left: 130px;
@@ -14,7 +17,6 @@
     letter-spacing: .2rem;
       font-size: 20pt;
       color: #fafafa;
-      font-family: 'nunito';
       font-weight: bolder;
 }
 
@@ -22,18 +24,18 @@
     letter-spacing: .2rem;
     font-size: 15pt;
     color: black;
-    font-family: 'nunito';
+    font-family: 'Nunito';
     font-weight: bolder;
 }
 
-.txt{
+/* .txt{
     font-family: Roboto,sans-serif;
     color: black;
 }
 
 .txt1{
     font-family: 'Roboto', sans-serif, Medium 500;  
-}
+} */
 
 .btn1{
     background-image: linear-gradient(to right, #FF6D67 0%, #fcb69f 51%, #ffecd2 100%);
