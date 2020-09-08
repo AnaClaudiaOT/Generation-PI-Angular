@@ -12,6 +12,16 @@ import { CadastroComponent } from './cadastro/cadastro.component';
 import { FeedComponent } from './feed/feed.component';
 import { ContatoComponent } from './contato/contato.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { HttpClientModule } from '@angular/common/http';
+import{ FormsModule } from '@angular/forms';
+import{ OrderModule } from 'ngx-order-pipe';
+import { PostTemaComponent } from './post-tema/post-tema.component';
+import { PutPostagemComponent } from './put-postagem/put-postagem.component';
+import { PutTemaComponent } from './put-tema/put-tema.component';
+import { DeletePostagemComponent } from './delete-postagem/delete-postagem.component';
+import { DeleteTemaComponent } from './delete-tema/delete-tema.component';
+
+
 
 @NgModule({
   declarations: [
@@ -23,12 +33,20 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     LoginComponent,
     CadastroComponent,
     FeedComponent,
-    ContatoComponent
+    ContatoComponent,
+    PostTemaComponent,
+    PutPostagemComponent,
+    PutTemaComponent,
+    DeletePostagemComponent,
+    DeleteTemaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    HttpClientModule,
+    FormsModule,
+    OrderModule
   ],
   providers: [],
   bootstrap: [AppComponent]

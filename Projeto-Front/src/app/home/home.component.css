@@ -1,7 +1,16 @@
+<<<<<<< HEAD
+=======
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+>>>>>>> 638cbb5b66d33681a68d3ffa4d13ff156adb7973
 .fonte{
     font-size: 30px;
     text-align: center;
     justify-content: center;
+}
+
+.letra{
+    font-family: 'Nunito';
 }
 
 .flexbox{
