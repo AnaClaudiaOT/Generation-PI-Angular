@@ -1,6 +1,6 @@
-<div class="container mt-3 mb-5 mt-5">
+<div class="container">
 
-    <div class="row d-flex justify-content-center align-items-center">
+    <div class="row d-flex justify-content-center mt-5">
         <!-- Form -->
         <div class="col-md-7 mt-3">
             <h1>Entre em contato conosco</h1>
@@ -16,30 +16,13 @@
                     <label for="inputTextArea">Mensagem</label>
                     <textarea class="form-control form-border" name="inputTextArea" id="inputTextArea" rows="7"></textarea>
                 </div>
-                <div class="d-flex justify-content-center align-items-end flex-column">
-                    <button type="button" class="btn success" data-toggle="modal" data-target="#exampleModal">Enviar</button>
-                </div>
-                
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-                    aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Tudo certo!</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Recebemos sua mensagem, muito obrigado!</p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                            </div>
-                        </div>
+
+                <div class="row mb-5">
+                    <div class="col-md-12 d-flex justify-content-end p-0">
+                        <button type="submit" class="btn btn-chernobyl success mr-3" (click)='enviar()'>Enviar</button>
                     </div>
                 </div>
+               
             </form>
         </div>
         
@@ -48,6 +31,6 @@
         </div>
 
 </div>
-<div class="espacamento">
+<div class="espacamento p-5 mb-5">
 
 </div>

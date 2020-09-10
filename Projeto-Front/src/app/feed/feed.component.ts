@@ -19,6 +19,7 @@ export class FeedComponent implements OnInit {
 
   key = 'data'
   reverse = true
+  
 
   constructor(
     private postagemService: PostagemService,
@@ -29,6 +30,7 @@ export class FeedComponent implements OnInit {
 
   postagem: PostagemModel = new PostagemModel();
   listaPostagens: PostagemModel[];
+  titulo: string;
 
   tema: TemaModel = new TemaModel();
   listaTemas: TemaModel[];
@@ -73,6 +75,16 @@ export class FeedComponent implements OnInit {
     this.temaService.getByIdTema(this.idTema).subscribe((resp: TemaModel) => {
       this.tema = resp;
     });
+  }
+
+  findByTituloPostagem() {
+    if (this.titulo === ''){
+      this.findAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.titulo).subscribe((resp: PostagemModel[]) => {
+        this.listaPostagens = resp
+      })
+    }
   }
 
 }

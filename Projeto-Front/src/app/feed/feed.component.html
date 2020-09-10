@@ -1,6 +1,6 @@
 <div class="container-fluid fonte">
 
-  <div class="row d-flex justify-content-center mt-3">
+  <div class="row d-flex justify-content-center mt-5">
     <div class="col-md-6">
       <label for="exampleInputEmail1">Tema</label>
       <div class="input-group mb-3">
@@ -36,13 +36,59 @@
         <small id="emailHelp" class="form-text text-muted">Informe sua fonte de pesquisa - Cole aqui seu link!</small>
       </div>
       <div class="form-group d-flex justify-content-end">
-        <button type="submit" class="btn success" (click)='publicar()'>Publicar</button>
+        <button type="submit" class="btn bot success" (click)='publicar()'>Publicar</button>
       </div>
       <hr class="mt-5">
     </div>
   </div>
 
-  <div class="row ddivx justify-content-center mt-3 mb-5">
+  <div class="row d-flex justify-content-center p-0 mt-3 ">
+    <nav>
+      <div class="col-md-12">
+        <div class="form-control form-border p-0" id="nav-tab" role="tablist">
+          <a class="nav-item nav-link active text-secondary font-weight-bold" id="nav-home-tab" data-toggle="tab"
+              role="tab" aria-controls="nav-home" aria-selected="true">Busca por título</a>
+  
+          
+      </div>
+
+      </div>
+      
+  
+  </nav>
+
+  </div>
+  
+
+<!--Pesquisar postagem  -->
+<div class="row d-flex justify-content-center">
+  <div class="d-flex justify-content-center">
+    <div class="col-md-12">
+      <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active " id="minhas-postagens" role="tabpanel"
+            aria-labelledby="nav-postagens-tab">
+            <div class="row d-flex justify-content-center mt-3 mb-3">
+                <div class="col-md-12 pr-0">
+                    <input class="form-control form-border w-100" type="search" placeholder="Pesquisar título"
+                        aria-label="Pesquisar" [(ngModel)]='titulo'>
+                </div>
+                <div class="col-md-12 pl-0 d-flex justify-content-end p-0">
+                    <button class="btn bot success mt-3 mr-0 mb-5" type="button"
+                        (click)='findByTituloPostagem()'>Pesquisar</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  
+</div>
+
+
+
+  <div class="row d-flex justify-content-center mt-3 mb-5">
     <div class="col-md-6">
 
       <div class="card my-3" *ngFor='let item of listaPostagens | orderBy : key : reverse'>
