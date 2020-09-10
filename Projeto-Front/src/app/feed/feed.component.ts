@@ -5,6 +5,7 @@ import { PostagemService } from '../service/postagem.service';
 import { TemaService } from '../service/tema.service';
 import { faEdit } from '@fortawesome/free-regular-svg-icons';
 import { faTrashAlt } from '@fortawesome/free-regular-svg-icons';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-feed',
@@ -19,7 +20,12 @@ export class FeedComponent implements OnInit {
   key = 'data'
   reverse = true
 
-  constructor(private postagemService: PostagemService, private temaService: TemaService) { }
+  constructor(
+    private postagemService: PostagemService,
+     private temaService: TemaService,
+     private alert: AlertasService
+     
+     ) { }
 
   postagem: PostagemModel = new PostagemModel();
   listaPostagens: PostagemModel[];
@@ -46,12 +52,12 @@ export class FeedComponent implements OnInit {
     this.postagem.tema = this.tema
 
     if (this.postagem.titulo == null || this.postagem.conteudo == null || this.postagem.tema == null || this.postagem.referencia == null) {
-      alert("Preencha todoos os campos antes de publicar!")
+      this.alert.showAlertInfo("Preencha todoos os campos antes de publicar!")
     } else {
       this.postagemService.postPostagem(this.postagem).subscribe((resp: PostagemModel) => {
         this.postagem = resp
         this.postagem = new PostagemModel()
-        alert('Postagem realizada com sucesso!')
+        this.alert.showAlertSuccess('Postagem realizada com sucesso!')
         this.findAllPostagens();
       })
     }

@@ -4,6 +4,7 @@ import { TemaModel } from '../model/TemaModel';
 import { TemaService } from '../service/tema.service';
 import { PostagemService } from '../service/postagem.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { AlertasService } from '../service/alertas.service';
 
 @Component({
   selector: 'app-put-postagem',
@@ -23,7 +24,8 @@ export class PutPostagemComponent implements OnInit {
     private temaService: TemaService,
     private postagemService: PostagemService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private alert: AlertasService
 
   ) { }
 
@@ -47,10 +49,10 @@ export class PutPostagemComponent implements OnInit {
     this.postagemService.putPostagem(this.postagem).subscribe((resp: PostagemModel) => {
       this.postagem = resp
       this.router.navigate(["/feed"])
-      alert("Postagem alterada com sucesso")
+      this.alert.showAlertSuccess("Postagem alterada com sucesso")
     }, err => {
       if (err.status == "500") {
-        alert ("Preencha todos os campos corretamente antes de enviar")
+        this.alert.showAlertInfo ("Preencha todos os campos corretamente antes de enviar")
         
       }
     })
